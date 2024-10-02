@@ -1,0 +1,104 @@
+
+1
+Python Development and Technical Writing Assignment:
+Create and Document a Command-Line File Processing Tool Using Sphinx
+The output document should resemble
+https://docs.rundeck.com/docs/manual/creating-jobs.html
+as an example .INCLUDE screenshot images of the python code input and output in the sphinx
+documentation.
+The sphinx document should contain the following links with appropriate content
+documenting each:
+User Guide
+Install
+Command Line Tools
+Process Text File
+Objective:
+Your task is to develop a Python program that accepts multiple
+command-line arguments
+to perform operations on a text file, and then DOCUMENT the program
+thoroughly using Sphinx.
+Assignment Details:
+Write a Python Program: You need to build a Python command-line tool
+that processes a text file and performs the following operations based
+on the arguments provided:
+Requirements:
+The program should use the argparse module to accept command-line
+arguments.
+The program should allow the user to specify the path to a text file and
+perform the following operations:
+Word Count: Count the total number of words in the file.
+Character Count: Count the total number of characters in the file.
+Line Count: Count the number of lines in the file.
+Find a Word: Search for a specific word in the file and display its
+frequency.
+Replace a Word: Replace a word in the file with another word and save
+the modified file as a new file.
+Command-Line Options:
+--file or -f: The path to the input text file (required).
+--word-count or -wc: Display the total word count.
+--char-count or -cc: Display the total character count.
+--line-count or -lc: Display the total line count.
+--find or -find: A specific word to search in the text file.
+--replace or -r: Replace a word in the text file with another word.
+Example usage: -r old_word new_word
+Example:
+The program should be run like this:
+python text_processor.py -f sample.txt -wc -cc -find "example" -r "old"
+"new"
+Output:
+Based on the flags, the output should look like this:
+Word Count: 1200
+Character Count: 7200
+The word "example" occurs 5 times.
+"old" was replaced with "new" and saved to updated_sample.txt
+Program Structure:
+The program should have separate functions for each task:
+count_words()
+count_chars()
+count_lines()
+find_word()
+replace_word()
+Make sure to handle errors such as:
+File not found.
+Missing required arguments.
+Searching or replacing a word that doesn't exist.
+Document Your Program with Sphinx:
+Set up Sphinx to generate technical documentation for your program.
+Your documentation should include:
+A detailed overview of the program's functionality.
+A usage guide explaining how to run the program with different
+command-line options.
+Automatically generated API documentation for the functions in your
+program.
+A section explaining error handling and any potential edge cases users
+should be aware of.
+Documentation Requirements:
+Write documentation in reStructuredText format (.rst).
+Use Sphinx autodoc to generate documentation for the Python code.
+Document your functions with appropriate docstrings using the following
+structure:
+Parameters: List all input parameters with types.
+Returns: What the function returns.
+Raises: Any exceptions that the function may raise.
+Deliverables:
+Python Code: The Python file text_processor.py.
+Sphinx Documentation:
+Ensure that the generated HTML documentation is included.
+Include an introduction, usage examples, and API documentation for all
+functions.
+Additional Notes:
+Ensure that your program is modular and easy to read.
+Be sure to test the program with various inputs to ensure correctness.
+Provide a clean directory structure:
+docs/ for Sphinx documentation files.
+src/ for the Python code.
+tests/ for any test files you use.
+Evaluation Criteria:
+Code Quality: Clean, modular code with proper error handling. PEP8 standards
+With type hinting and comments
+Command-line Interface: Proper usage of argparse and flexible input
+options.
+Documentation Quality: The Sphinx documentation should be clear,
+structured, and provide useful information for users.
+Functionality: The program should meet the requirements and run
+correctly with different input files and commands.
