@@ -18,5 +18,8 @@ You can run the command line tools using:
 Options
 -------
 
-- `-c`, `--count`: Count words in a text file.
-- `-f`, `--find`: Find a specific word.
+- `-wc`, `--word-count`: Count words in a text file.
+- `-f`, `--file`: Path of input text file.
+- `-cc` `--char-count` : Display the total character count.
+- `-lc` `--line-count` : Display the total line count.
+- `-r` `--replace` : Replace a word in the text file with another word..

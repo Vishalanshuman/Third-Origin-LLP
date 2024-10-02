@@ -1,26 +1,76 @@
 import argparse
 
 def count_words(file_path: str) -> int:
+    """
+    Count the total number of words in the text file.
+
+    Parameters:
+        file_path (str): The path to the input text file.
+
+    Returns:
+        int: The total number of words in the file.
+
+    Raises:
+        FileNotFoundError: If the specified file does not exist.
+    """
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     return len(text.split())
 
 def count_characters(file_path: str) -> int:
+    """
+    Count the total number of characters in the text file.
+
+    Parameters:
+        file_path (str): The path to the input text file.
+
+    Returns:
+        int: The total number of characters in the file.
+    """
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     return len(text)
 
 def count_lines(file_path: str) -> int:
+    """
+    Count the total number of lines in the text file.
 
+    Parameters:
+        file_path (str): The path to the input text file.
+
+    Returns:
+        int: The total number of lines in the file.
+    """
     with open(file_path, 'r', encoding='utf-8') as file:
         return sum(1 for line in file)
 
 def find_word(file_path: str, word: str) -> int:
+    """
+    Search for a specific word in the text file and display its frequency.
+
+    Parameters:
+        file_path (str): The path to the input text file.
+        word (str): The word to search for.
+
+    Returns:
+        int: The frequency of the word in the text file.
+    """
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     return text.lower().split().count(word.lower())
 
 def replace_word(file_path: str, old_word: str, new_word: str) -> str:
+    """
+    Replace a word in the text file with another word and save it as a new file.
+
+    Parameters:
+        file_path (str): The path to the input text file.
+        old_word (str): The word to be replaced.
+        new_word (str): The word to replace with.
+
+    Returns:
+        str: The path to the modified file.
+    """
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     modified_text = text.replace(old_word, new_word)

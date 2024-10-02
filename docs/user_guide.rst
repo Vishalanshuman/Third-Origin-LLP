@@ -11,5 +11,5 @@ Features include:
 - Finding a specific word
 - Replacing a word in the text file
 
-.. image:: ../images/example_usage.png
-   :alt: Example Usage Screenshot
+.. .. image:: ../images/example_usage.png
+..    :alt: Example Usage Screenshot
